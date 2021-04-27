@@ -1,0 +1,153 @@
+/* Gotham Book font */
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('../font/gothamFont/gothambook-webfont.woff2') format('woff2'),
+         url('../font/gothamFont/gothambook-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --blue: rgb(22, 82, 240);
+}
+
+body {
+    width: 90%;
+    height: 95vh;
+    background-color: #222222;
+    color: white;
+
+    font-family: 'Gotham Book';
+
+    margin-left: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    min-width: 50%;
+    height: 50vh;
+    
+    border: 1px solid var(--blue);
+    border-radius: 15px;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-header {
+    width: 100%;
+    line-height: 2rem;
+    
+    text-align: center;
+}
+
+.game-header * {
+    display: inline-flex;
+}
+
+.header-left {
+    width: 40%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right {
+    width: 40%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.users-score, .computers-score {
+    margin-left: 8px;
+}
+
+.game-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container * {
+    display: inline-flex;
+}
+
+.users-choice {
+    width: 40%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.computers-choice {
+    width: 40%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container-choice {
+    height: 64px;
+    margin-top: 12px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container-choice i {
+    transform: scale(1.5);
+}
+
+.container-icon {
+    width: 64px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--blue);
+    border-radius: 15px;
+}
+
+.game-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.game-footer * {
+    display: inline-flex;
+}
+
+.footer-choice {
+    width: 64px;
+    height: 64px;
+
+    margin-left: 8px;
+    margin-right: 8px;
+
+    border: 1px solid var(--blue);
+    border-radius: 15px;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: 125ms;
+}
+
+.footer-choice:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}

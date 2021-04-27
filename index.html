@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/fa178081cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="game">
+        <div class="game-header">
+            <div class="header-left">
+                <span class="name">You: </span>
+                <span class="users-score">0</span>
+            </div>
+            <div class="header-right">
+                <span class="computer-name">Computer:</span>
+                <span class="computers-score">0</span>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="users-choice container-choice">
+                <div class="container-icon container-icon-user">
+                </div>
+            </div>
+
+            <div class="computers-choice container-choice">
+                <div class="container-icon container-icon-computer">
+                </div>
+            </div>
+        </div>
+
+        <div class="game-footer">
+            <div class="footer-choice" id="rock">
+                <i class="far fa-hand-rock" id="rock"></i>
+            </div>
+            
+            <div class="footer-choice paper" id="paper">
+                <i class="far fa-hand-paper" id="paper"></i>
+            </div>
+
+            <div class="footer-choice scissors" id="scissors">
+                <i class="far fa-hand-scissors" id="scissors"></i>
+            </div>
+        </div>
+    </div> 
+<script src="./game.js"></script>
+</body>
+</html>
