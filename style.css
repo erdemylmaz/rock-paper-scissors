@@ -11,6 +11,11 @@
     --blue: rgb(22, 82, 240);
 }
 
+img {
+    width: 0px;
+    height: 0px;
+}
+
 body {
     width: 90%;
     height: 95vh;
@@ -150,4 +155,8 @@ body {
 .footer-choice:hover {
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
+}
+
+.rollingIcon {
+    color: rgba(255, 255, 255, 0.4);
 }

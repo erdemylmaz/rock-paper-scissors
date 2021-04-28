@@ -123,15 +123,15 @@ select = (e) => {
     usersChoiceDOM.innerHTML = "";
     usersChoiceDOM.appendChild(i);
 
-    computersChoiceDOM.innerHTML = `<h3>3</h3>`;
+    computersChoiceDOM.innerHTML = `<i class="far fa-hand-rock rollingIcon"></i>`;
 
     setTimeout(() => {
-        computersChoiceDOM.innerHTML = `<h3>2</h3>`;
-    }, 1000);
+        computersChoiceDOM.innerHTML = `<i class="far fa-hand-paper rollingIcon"></i>`;
+    }, 750);
 
     setTimeout(() => {
-        computersChoiceDOM.innerHTML = `<h3>1</h3>`;
-    }, 2000);
+        computersChoiceDOM.innerHTML = `<i class="far fa-hand-scissors rollingIcon"></i>`;
+    }, 1500);
 
     setTimeout(() => {
         computersChoiceDOM.innerHTML = "";
@@ -139,7 +139,7 @@ select = (e) => {
         computersChoiceDOM.appendChild(i);
         
         start(usersChoice);
-    }, 3000);
+    }, 2250);
 
 }
 
