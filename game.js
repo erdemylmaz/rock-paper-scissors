@@ -69,6 +69,8 @@ init = (winner, score, usersChoice) => {
     i.className = `far fa-hand-${usersChoice}`;
 
     usersChoiceDOM.appendChild(i);
+
+    document.body.className = "";
 }
 
 start = (usersChoice) => {
@@ -124,34 +126,37 @@ start = (usersChoice) => {
 }
 
 select = (e) => {
-    var usersChoice = e.target.id;
+    if(document.body.className != "isPlaying") {
+        document.body.classList.add('isPlaying');
+        var usersChoice = e.target.id;
 
-    let random = Math.floor(Math.random() * selects.length);
-    computersChoice = selects[random];
+        let random = Math.floor(Math.random() * selects.length);
+        computersChoice = selects[random];
 
-    let i = document.createElement('i');
-    i.className = `far fa-hand-${usersChoice}`;
+        let i = document.createElement('i');
+        i.className = `far fa-hand-${usersChoice}`;
 
-    usersChoiceDOM.innerHTML = "";
-    usersChoiceDOM.appendChild(i);
+        usersChoiceDOM.innerHTML = "";
+        usersChoiceDOM.appendChild(i);
 
-    computersChoiceDOM.innerHTML = `<i class="far fa-hand-rock rollingIcon"></i>`;
+        computersChoiceDOM.innerHTML = `<i class="far fa-hand-rock rollingIcon"></i>`;
 
-    setTimeout(() => {
-        computersChoiceDOM.innerHTML = `<i class="far fa-hand-paper rollingIcon"></i>`;
-    }, 750);
+        setTimeout(() => {
+            computersChoiceDOM.innerHTML = `<i class="far fa-hand-paper rollingIcon"></i>`;
+        }, 750);
 
-    setTimeout(() => {
-        computersChoiceDOM.innerHTML = `<i class="far fa-hand-scissors rollingIcon"></i>`;
-    }, 1500);
+        setTimeout(() => {
+            computersChoiceDOM.innerHTML = `<i class="far fa-hand-scissors rollingIcon"></i>`;
+        }, 1500);
 
-    setTimeout(() => {
-        computersChoiceDOM.innerHTML = "";
-        i.className = `far fa-hand-${computersChoice}`;
-        computersChoiceDOM.appendChild(i);
-        
-        start(usersChoice);
-    }, 2250);
+        setTimeout(() => {
+            computersChoiceDOM.innerHTML = "";
+            i.className = `far fa-hand-${computersChoice}`;
+            computersChoiceDOM.appendChild(i);
+            
+            start(usersChoice);
+        }, 2250);
+    }
 
 }
 
