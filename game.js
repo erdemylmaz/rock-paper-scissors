@@ -23,36 +23,44 @@ init = (winner, score, usersChoice) => {
         usersScoreDOM.textContent = score;
 
         usersChoiceDOM.style.border = "1px solid green";
+        usersChoiceDOM.style.backgroundColor = "rgba(0, 255, 0, 0.1)";
         usersChoiceDOM.style.transform = "scale(1.3)";
         usersChoiceDOM.style.transition = "250ms";
 
         computersChoiceDOM.style.border = "1px solid red";
+        computersChoiceDOM.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
         computersChoiceDOM.style.transform = "scale(0.5)";
         computersChoiceDOM.style.transition = "250ms";
 
         setTimeout(() => {
             usersChoiceDOM.style.border = "1px solid var(--blue)";
+            usersChoiceDOM.style.backgroundColor = "#222222";
             usersChoiceDOM.style.transform = "scale(1)";
 
             computersChoiceDOM.style.border = "1px solid var(--blue)";
+            computersChoiceDOM.style.backgroundColor = "#222222";
             computersChoiceDOM.style.transform = "scale(1)";
         }, 750);
     } else if (winner == "computer") {
         computersScoreDOM.textContent = score;
 
         usersChoiceDOM.style.border = "1px solid red";
+        usersChoiceDOM.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
         usersChoiceDOM.style.transform = "scale(0.5)";
         usersChoiceDOM.style.transition = "250ms";
 
         computersChoiceDOM.style.border = "1px solid green";
+        computersChoiceDOM.style.backgroundColor = "rgba(0, 255, 0, 0.1)";
         computersChoiceDOM.style.transform = "scale(1.3)";
         computersChoiceDOM.style.transition = "250ms";
 
         setTimeout(() => {
             computersChoiceDOM.style.border = "1px solid var(--blue)";
             computersChoiceDOM.style.transform = "scale(1)";
+            computersChoiceDOM.style.backgroundColor = "#222222";
 
             usersChoiceDOM.style.border = "1px solid var(--blue)";
+            usersChoiceDOM.style.backgroundColor = "#222222";
             usersChoiceDOM.style.transform = "scale(1)";
         }, 750);
     }
@@ -72,18 +80,22 @@ start = (usersChoice) => {
         usersChoiceDOM.appendChild(i);
 
         computersChoiceDOM.style.border = "1px solid red";
+        computersChoiceDOM.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
         computersChoiceDOM.style.transform = "scale(0.5)";
         computersChoiceDOM.style.transition = "250ms";
 
         usersChoiceDOM.style.border = "1px solid red";
+        usersChoiceDOM.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
         usersChoiceDOM.style.transform = "scale(0.5)";
         usersChoiceDOM.style.transition = "250ms";
 
         setTimeout(() => {
             computersChoiceDOM.style.border = "1px solid var(--blue)";
+            computersChoiceDOM.style.backgroundColor = "#222222";
             computersChoiceDOM.style.transform = "scale(1)";
 
             usersChoiceDOM.style.border = "1px solid var(--blue)";
+            usersChoiceDOM.style.backgroundColor = "#222222";
             usersChoiceDOM.style.transform = "scale(1)";
         }, 750);
 
