@@ -101,6 +101,8 @@ start = (usersChoice) => {
             usersChoiceDOM.style.transform = "scale(1)";
         }, 750);
 
+        document.body.className = "";
+
     } else if(usersChoice + computersChoice == "paperrock") {
         winner = 'user';
         usersScore++;
